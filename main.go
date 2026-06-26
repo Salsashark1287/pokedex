@@ -16,7 +16,7 @@ for {
 		input_word := input_list[0]
 		command_map := getCommands()
 		if command, ok := command_map[input_word]; ok {
-			command.callback()
+			command.callback(cfg)
 		} else {
 			fmt.Println("Unknown command")
 		}
